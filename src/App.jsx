@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Product from "./pages/Product";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
+import Product from "./pages/Product";
+import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./pages/AppLayout";
 
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/app" element={<AppLayout />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
