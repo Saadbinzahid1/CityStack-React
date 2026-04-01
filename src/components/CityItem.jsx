@@ -1,0 +1,25 @@
+import styles from "./CityItem.module.css";
+
+const formatDate = (date) =>
+  new Intl.DateTimeFormat("en", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    weekday: "long",
+  }).format(new Date(date));
+
+export default function CityItem({ city }) {
+  const { cityName, countryCode, date } = city;
+  return (
+    <li className={styles.cityItem}>
+      <img
+        src={`https://flagcdn.com/24x18/${countryCode}.png`}
+        alt="Portugal"
+        className={styles.emoji}
+      />
+      <h3 className={styles.name}>{cityName}</h3>
+      <time className={styles.date}>{formatDate(date)}</time>
+      <button className={styles.deleteBtn}>&times;</button>
+    </li>
+  );
+}
