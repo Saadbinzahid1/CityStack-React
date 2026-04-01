@@ -14,7 +14,7 @@ export default function CityItem({ city }) {
     <li className={styles.cityItem}>
       <img
         src={`https://flagcdn.com/24x18/${countryCode}.png`}
-        alt="Portugal"
+        alt="Flag"
         className={styles.emoji}
       />
       <h3 className={styles.name}>{cityName}</h3>
